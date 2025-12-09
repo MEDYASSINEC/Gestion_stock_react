@@ -1,13 +1,13 @@
-function TableTr () {
+function TableTr (  {data, onDelete} ) {
     return (
         <tr>
-            <td>001</td>
-            <td>nom porduit</td>
-            <td>image</td>
-            <td>1.5</td>
-            <td>50</td>
+            <td>{data.id}</td>
+            <td>{data.desc}</td>
+            <td>{data.image}</td>
+            <td>{data.pu}</td>
+            <td>{data.qte}</td>
             <td>
-                <button className="btnSupp">supprimer</button>
+                <button className="btnSupp" onClick={() => onDelete(data.id)}>supprimer</button>
             </td>
         </tr>
     )
